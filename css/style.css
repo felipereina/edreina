@@ -1,6 +1,7 @@
 body{
     margin: 0;
     color: #707070;
+    font-family: 'Lora', serif;
 }
 
 a{
@@ -15,12 +16,14 @@ img {
 Typography
 ========================== */ 
 
-
-
-h1 {
-    color: darkkhaki;
+h1,
+h2,
+h3 {
     margin: 0;
+    color: #143774;
+    font-weight: 400;
 }
+
 
 /* ==========================
 Navbar
@@ -48,6 +51,7 @@ nav li {
 
 nav a {
     text-decoration: none;
+    color: #717171;
 }
 
 .container-nav {
@@ -71,10 +75,60 @@ nav a {
     color: #1792D2;
 }
 
+.sub-title {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .75rem;
+}
+
 /* ==========================
-Layout
+Main Layout
 ========================== */
 
 .container-main {
     border: 1px solid magenta;
+    display: flex;
+    justify-content:space-between;
+    margin: 2em auto;
+}
+
+main {
+    width: 73%;
+}
+
+aside{
+    width: 22%;
+}
+
+.post-recent {
+    border: 1px solid blue;
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-recent-main {
+    width: 60%;
+}
+
+.post-recent-aside {
+    width: 30%;
+}
+
+/* ==========================
+Aside Layout
+========================== */
+.aside-widget {
+    border: 1em solid #EBEBEB;
+    padding: 1em;
+    margin-bottom: 2em;
+
+}
+/* ==========================
+Footer
+========================== */
+
+footer {
+    background: #143774;
+    padding: 2em 0;
 }
