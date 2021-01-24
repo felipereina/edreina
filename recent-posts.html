@@ -5,7 +5,7 @@
 
         <title>Simple Life Blog</title>
         <link href="https://fonts.googleapis.com/css?family=Lora|Ubuntu:300,400,700&display=swap" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet"></>
+        <link href="css/style.css" rel="stylesheet"></link>
     </head>
     <body>
         <header>
@@ -16,9 +16,9 @@
                 </div>         
                 <nav>
                     <ul>
-                        <li><a class="current-page" href="index.html">Home</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="about-me.html">About Me</a></li>
-                        <li><a href="recent-posts.html">Recent Posts</a></li>
+                        <li><a class="current-page" href="recent-posts.html">Recent Posts</a></li>
                     </ul>
                 </nav> 
             </div>           
@@ -26,17 +26,22 @@
 
         <div class="container container-flex">
             <main>
-                <div class="article-featured">
-                    <img src="images/photo-1533090161767-e6ffed986c88.jpeg" alt="" class="article-image">
-                    <p class="article-info">July 23, 2019 | 3 comments</p>
-                    <h2 class="article-title">Finding simplicity in life</h2>
-                    <p class="article-body">
-                        Life can get complicated really quickly, but it doesn't have to be! 
-                        There are many ways to simplify your life, <a href="#">a few of which we've explored in the past.</a> 
-                        This week we're taking a bit of a approach though, in how you can find simplicity in the life you already living. continue reading
-                    </p>
-                    <a class="article-link" href="#">CONTINUE READING</a>
+                <div class="article-recent">
+                    <div class="article-recent-aside">
+                        <img src="images/photo-1533090161767-e6ffed986c88.jpeg" alt="" class="article-image">
+                        <p class="article-info">July 23, 2019 | 3 comments</p>
+                    </div>
+                    <div class="article-recent-main">
+                        <h2 class="article-title">Finding simplicity in life</h2>
+                        <p class="article-body">
+                            Life can get complicated really quickly, but it doesn't have to be! 
+                            There are many ways to simplify your life, <a href="#">a few of which we've explored in the past.</a> 
+                            This week we're taking a bit of a approach though, in how you can find simplicity in the life you already living. continue reading
+                        </p>
+                        <a class="article-link" href="#">CONTINUE READING</a>
+                    </div>
                 </div>
+
                 <div class="article-recent">
                     <div class="article-recent-aside">
                         <img src="images/photo-1496116218417-1a781b1c416c.jpeg" alt="" class="article-image">
@@ -110,10 +115,8 @@
         </div>
 
         <footer>
-            <div class="container">
             <p><strong>Living the Simple Life</strong></p>
             <p>Copyright 2019</p>
-            </div>
         </footer>
         
     </body>
