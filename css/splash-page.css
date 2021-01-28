@@ -1,0 +1,104 @@
+
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    color: #404040;
+    font-weight: 300;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* =======================
+   Typography
+   ===================== */
+
+h1,
+h2{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.intro h1 {
+    color: white;
+    font-size: 2.25rem;
+    font-weight: 300;
+    margin: 2em 0;
+}
+
+h1 + p {
+    color: #F18119;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.main-content h2 {
+    font-size: 1.3125rem;
+    margin: 0;
+}
+
+h2 + p {
+    color: #F18119;
+    font-weight: 900;
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-top: 0;
+}
+
+.top-text{
+    font-size: .625rem;
+    font-weight: 900;
+    color:#F18119;
+    letter-spacing: 1px;
+    order: -1;
+}
+
+.fine-print {
+    font-size: .625rem;
+    letter-spacing: 1px;
+}
+
+strong {
+    font-size: 900;
+}
+
+/* =======================
+   Intro Section
+   ===================== */
+
+.intro {
+    padding: 0 .5em 2em;
+    background-color: #404040;
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),url("../images/ribs.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =======================
+   Main Content Section
+   ===================== */
+
+.main-content{
+    padding: 2em 1em;
+}
+
+ .split{
+    display: flex;
+    flex-direction: column;
+}
+
+/* =======================
+   Media Query
+   ===================== */
+
+@media (min-width: 570px){
+    .split{
+        flex-direction: row;
+    }
+
+    .intro,
+    .main-content{
+        width: 50%;
+    }
+}
