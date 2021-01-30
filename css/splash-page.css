@@ -1,12 +1,15 @@
+* {
+  box-sizing: border-box;
+}
 
 body {
-    margin: 0;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 1rem;
-    color: #404040;
-    font-weight: 300;
-    line-height: 1.5;
-    text-align: center;
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1rem;
+  color: #404040;
+  font-weight: 300;
+  line-height: 1.5;
+  text-align: center;
 }
 
 /* =======================
@@ -14,51 +17,55 @@ body {
    ===================== */
 
 h1,
-h2{
-    font-family: 'Source Sans Pro', sans-serif;
+h2 {
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 .intro h1 {
-    color: white;
-    font-size: 2.25rem;
-    font-weight: 300;
-    margin: 2em 0;
+  color: white;
+  font-size: 2.25rem;
+  font-weight: 300;
+  margin: 0;
 }
 
 h1 + p {
-    color: #F18119;
-    font-weight: 900;
-    text-transform: uppercase;
+  color: #f18119;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
 .main-content h2 {
-    font-size: 1.3125rem;
-    margin: 0;
+  font-size: 1.3125rem;
+  margin: 0;
 }
 
-h2 + p {
+.main-content h2 + p {
+  color: #f18119;
+  font-weight: 900;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+.top-text {
+    font-size: 0.625rem;
+    margin: 0;
+    padding: 2px 0 0;
     color: #F18119;
     font-weight: 900;
-    font-size: 1rem;
     text-transform: uppercase;
-    margin-top: 0;
-}
-
-.top-text{
-    font-size: .625rem;
-    font-weight: 900;
-    color:#F18119;
-    letter-spacing: 1px;
     order: -1;
+    border-top: 5px solid #F18119;
+    letter-spacing: 1px;
 }
 
 .fine-print {
-    font-size: .625rem;
-    letter-spacing: 1px;
+  font-size: 0.625rem;
+  letter-spacing: 1px;
 }
 
 strong {
-    font-size: 900;
+  font-size: 900;
 }
 
 /* =======================
@@ -66,39 +73,100 @@ strong {
    ===================== */
 
 .intro {
-    padding: 0 .5em 2em;
-    background-color: #404040;
-    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),url("../images/ribs.jpg");
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
+  padding: 0 0.5em 2em;
+  background-color: #404040;
+  background-image:url("../images/ribs.jpg");
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 50vh;
 }
 
 /* =======================
    Main Content Section
    ===================== */
 
-.main-content{
-    padding: 2em 1em;
+.main-content {
+  padding: 2em 1em;
 }
 
- .split{
-    display: flex;
-    flex-direction: column;
+.split {
+  display: flex;
+  flex-direction: column;
+}
+
+/* =======================
+   Form
+   ===================== */
+.email-collector {
+  width: 80%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+input,
+.btn {
+  width: 100%;
+  border-radius: 5px;
+}
+
+input{
+    margin-bottom: .75em;
+    font-family: inherit;
+    text-align: inherit;
+    padding: .25em;
+    border: 1px solid #404040;
+    transition: transform 250ms;
+}
+
+input:focus{
+    transform: scale(1.05);
+}
+
+.btn {
+    display: inline-block;
+    padding: 1em 1.5em;
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 1px;
+    border: 0;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: linear-gradient(to left, #ff713b, #ffa51d);
+    color: white;
+    transform: scale(1);
+    transition: transform 250ms;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    transform: scale(1.1);
 }
 
 /* =======================
    Media Query
    ===================== */
 
-@media (min-width: 570px){
-    .split{
-        flex-direction: row;
-    }
+@media (min-width: 570px) {
+  .split {
+    flex-direction: row;
+  }
 
-    .intro,
-    .main-content{
-        width: 50%;
-    }
+  .intro,
+  .main-content {
+    width: 50%;
+    min-height: 100%;
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
